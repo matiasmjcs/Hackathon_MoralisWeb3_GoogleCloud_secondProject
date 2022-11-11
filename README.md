@@ -74,7 +74,7 @@ medical record, patient and specialist information is stored in the smart contra
 
 # technologies used
 
-javaScript, solidity, hardhat, ethers.js ,Bsc testnet, React.js, Sass, Moralis Web3, npm, Node.js, fortawesome, web3uikit, jspdf, sweetalert2
+javaScript, solidity, hardhat, ethers.js ,Polygon Testnet, React.js, Sass, Moralis Web3, npm, Node.js, fortawesome, web3uikit, sweetalert2
 
 </div>
 
