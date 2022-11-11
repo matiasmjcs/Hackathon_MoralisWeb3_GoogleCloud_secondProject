@@ -1,0 +1,61 @@
+.registerDiv {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  justify-items: center;
+  font-size: 1.5rem;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.registerDiv__box {
+  width: 80%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  background: #111;
+  border: 1px solid rgb(123, 63, 228);
+}
+
+.registerDiv__box2 {
+  border-radius: 10px;
+  border: 0.5px solid rgb(123, 63, 228);
+}
+
+.registerDiv__buttonMetamask {
+  width: 90px;
+  height: 90px;
+  cursor: pointer;
+  border: none;
+  color: white;
+  background: transparent;
+  transition: all 0.2s;
+}
+
+.registerDiv__buttonMetamask:hover {
+  box-shadow: none;
+}
+
+.registerDiv__buttonMetamask--M {
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+}
+
+.registerDiv__buttonMetamask--M {
+  -webkit-animation: none;
+          animation: none;
+  transition: all 0.2s;
+}
+
+.registerDiv__buttonMetamask--M:hover {
+  width: 75px;
+  height: 75px;
+}/*# sourceMappingURL=BoxMetamask.css.map */

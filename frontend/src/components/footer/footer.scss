@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&family=Trispace&display=swap');
+
+footer {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    font-size: 1.5rem;
+    height: 350px;
+    width: 100%;
+    color: #dddddd;
+    background: transparent;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+footer div {
+    width: 80%;
+}
+
+footer div a {
+    text-decoration: none;
+    color: #dddddd;
+}
+
+footer div a:hover {
+   color: rgb(123, 63, 228);
+}
+
+.repository {
+    display: grid;
+    align-items: center;
+}
