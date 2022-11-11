@@ -15,6 +15,24 @@ library TimestampHelper {
 
 contract vehicleRegister {
 
+    struct user {
+       string name;
+       address Address;
+       string country;
+       string city;
+       address[] star;
+       address[] negative;
+    }
+
+    event newUSer (
+       string name,
+       address Address,
+       string country,
+       string city,
+       address[] star,
+       address[] negative
+    );
+
     // strcut for each vehicle
     struct vehicle {
         string patent;
@@ -69,6 +87,16 @@ contract vehicleRegister {
     // mapping to visualize a maintenance
     mapping(bytes32 => maintenance ) public viewMaintenance;
 
+     // mapping to visualize a user
+    mapping(address => user ) public viewUSer;
+
+    // function to register a user
+    function registerUser (string memory _name, string memory _country, string memory _city) public {
+        address[] memory _star;
+        address[] memory _negative;
+        viewUSer[msg.sender] = user(_name, msg.sender, _country, _city, _star, _negative);
+        emit newUSer(_name, msg.sender, _country, _city, _star, _negative);
+    }
 
     // function to register a vehicle
     function RegisterNewVehicle(string memory _patent, string memory _brand, string memory _date, uint _year) public {
@@ -90,29 +118,58 @@ contract vehicleRegister {
         emit newOwner(_newOwner);
     }
 
-    // function to register maintenance
+    // function to register a new maintenance
     function registerMaintenance(string memory _patent, string memory _date, string memory _direction, string memory _description ) public {
         vehicle storage _vehicle = viewVehicle[_patent];
         require( _vehicle.owner == msg.sender);
         uint _time = TimestampHelper.getHour(block.timestamp);
         bytes32 _ID = keccak256(abi.encodePacked(_patent, _date, _direction, _description ));
         _vehicle.maintenanceHistory.push( _ID);
-        viewMaintenance[_ID] = maintenance(_date, _time, _direction, _ID, _direction, msg.sender);
-        emit newMaintenance(_date, _time, _direction, _ID, _direction, msg.sender);     
+        viewMaintenance[_ID] = maintenance(_date, _time, _direction, _ID, _description, msg.sender);
+        emit newMaintenance(_date, _time, _direction, _ID, _description, msg.sender);     
     }
 
-    // function to return maintenance history
+    // function to return maintenance
     function returnMaintenance(string memory _patent) public view returns(bytes32[] memory) {
         vehicle storage _vehicle = viewVehicle[_patent];
         bytes32[] storage _maintenanceHistory = _vehicle.maintenanceHistory;
         return _maintenanceHistory;
     }
 
-    // function to return history of vehicle owners
+    // function to return owner history
      function returnOwners(string memory _patent) public view returns(address[] memory) {
         vehicle storage _vehicle = viewVehicle[_patent];
         address[] storage _ownerHistory = _vehicle.ownerHistory;
         return _ownerHistory;
+    }
+
+    // function to register a good user
+    function happyPartners(address _address) public {
+        user storage _user = viewUSer[_address];
+        _user.star.push(msg.sender);
+        viewUSer[_address] = _user; 
+    }
+
+    // function to register a bad user
+    function unhappyPartners(address _address) public  {
+        user storage _user = viewUSer[_address];
+        _user.negative.push(msg.sender);
+        viewUSer[_address] = _user; 
+    }
+
+    // function to return happy partners
+    function returnHappyPartners(address _address) public view returns(address[] memory){
+        user storage _user = viewUSer[_address];
+        address[] storage _happyPartners = _user.star;
+        return _happyPartners;
+
+    }
+
+    // function to return unhappy partners
+    function returnUnhappyPartners(address _address) public view returns(address[] memory) {
+        user storage _user = viewUSer[_address];
+        address[] storage _unhappyPartners = _user.negative;
+        return _unhappyPartners;
     }
 
 }

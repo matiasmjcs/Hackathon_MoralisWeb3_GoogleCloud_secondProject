@@ -1,6 +1,23 @@
-require("@nomicfoundation/hardhat-toolbox");
+require('dotenv').config();
+require("@nomiclabs/hardhat-ethers");
 
-/** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
-  solidity: "0.8.9",
-};
+  defaultNetwork: "mumbai",
+  networks: {
+    hardhat: {
+    },
+    mumbai: {
+      url: process.env.URL,
+      accounts: [process.env.PRIVATE_KEY]
+    }
+  },
+  solidity: {
+    version: "0.8.9",
+    settings: {
+      optimizer: {
+        enabled: true,
+        runs: 200
+      }
+    }
+  },
+}

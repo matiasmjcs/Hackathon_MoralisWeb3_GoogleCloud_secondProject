@@ -19,20 +19,20 @@ $breackpoints: (
 .userPanel {
     color: white;
     display: grid;
-    gap: 2rem;
+    gap: 1.3rem;
 
 }
 
 .userPanel__h2 {
-    font-size: 6rem;
+    font-size: 4rem;
     font-family: 'Montserrat', sans-serif;
     color:$color1 ;
     justify-self: center;
 }
 
 .userPanel__box {
-    width: 25rem;
-    height: 20rem;
+    width: 15rem;
+    height: 14rem;
     box-shadow: 2px 2px 2px #222;
     background-color: rgb(7, 7, 7);
     display: grid;
@@ -40,13 +40,13 @@ $breackpoints: (
 }
 
 .userPanel__parrafo {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
     color: rgb(131, 130, 130);
 }
 
 .userPanel_titulo {
-    font-size: 2rem;
+    font-size: 1rem;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
         color: rgb(131, 130, 130);
@@ -55,8 +55,8 @@ $breackpoints: (
 .userPanel__vehicle {
     display: grid;
     justify-items: center;
-    gap: 2rem;
-    margin-bottom: 3rem;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
 
     @include media-up(sm) {
         grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -78,8 +78,8 @@ $breackpoints: (
 .userPanel__user {
     display: grid;
     justify-items: center;
-    margin-bottom: 3rem;
-        gap: 2rem;
+    margin-bottom: 2rem;
+        gap: 1.5rem;
 
     @include media-up(sm) {
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -101,8 +101,8 @@ $breackpoints: (
 .userPanel__maintenance {
     display: grid;
     justify-items: center;
-    gap: 2rem;
-    margin-bottom: 3rem;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
 
     @include media-up(sm) {
         grid-template-rows: 1fr 1fr 1fr;
@@ -136,7 +136,7 @@ $breackpoints: (
 {
     position: relative;
     width: 70%;
-    height: 50rem;
+    height: 35rem;
     background: #222;
     display: flex;
     justify-content: center;
@@ -148,7 +148,7 @@ $breackpoints: (
     width: 80%;
     height: 80%;
     display: grid;
-    justify-content: center;
+    justify-items: center;
     align-items: center;
 
     @include media-up(sm) {
@@ -163,7 +163,23 @@ $breackpoints: (
 
 .form-box label {
     color: #fff;
-    font-size: 1.7rem;
+    font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
 }
 
+.divContainer__ulres {
+    position: relative;
+        width: 80%;
+        height: 80%;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        list-style: none;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        
+        @include media-up(sm) {
+            grid-template-columns: 1fr;
+            grid-auto-flow: row;
+        }
+}

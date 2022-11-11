@@ -39,10 +39,10 @@
 }
 
 .welcome__h1 {
-  font-size: 5rem;
+  font-size: 3rem;
   font-family: "Press Start 2P", cursive;
-  letter-spacing: 1rem;
-  margin: 1rem;
+  letter-spacing: 0.7rem;
+  margin: 0.7rem;
   color: rgb(123, 63, 228);
 }
 
@@ -50,7 +50,7 @@
   position: absolute;
   content: "";
   width: 2px;
-  height: 1rem;
+  height: 0.7rem;
   top: 2px;
   right: 2px;
   color: aliceblue;
@@ -58,7 +58,7 @@
 }
 
 .welcome__p {
-  font-size: 2rem;
+  font-size: 1.4rem;
   margin: 10px;
   font-family: "Space Grotesk", sans-serif;
 }
