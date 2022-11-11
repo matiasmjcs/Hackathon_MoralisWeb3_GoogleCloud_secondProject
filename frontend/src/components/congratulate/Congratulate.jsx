@@ -128,7 +128,7 @@ const Congratulate = ({ close }) => {
                         <>
                             <label>Address</label>
                             <Input type='text' name='Address' placeholder='Address' />
-                            <button className='divContainer__button'>Report</button>
+                            <button className='divContainer__button'>Congratulate</button>
                         </>}
                 </form>
                 <ButtonClose close={close} />
