@@ -83,7 +83,7 @@ const History = () => {
                             </span>
                         </div>
                         <div className='divTx__divBsc'>
-                            <a Target="_blank" href='https://testnet.bscscan.com/'>
+                            <a Target="_blank" href='https://mumbai.polygonscan.com/'>
                                 View Polygon Scan Testnet
                             </a>
                         </div>
