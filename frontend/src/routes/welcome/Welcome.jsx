@@ -1,10 +1,8 @@
 import './welcome.css'
 import Button from '../../components/button1/button'
 import { NavLink } from 'react-router-dom'
+
 const Welcome = () => {
-
-
-
   return (
     <div className="welcome">
       <section className='welcome__section1'>
@@ -24,6 +22,9 @@ const Welcome = () => {
         </article>
 
         <article className='welcome_article1--imagen'>
+          <div className='welcome_article1--imagen-child'>
+
+          </div>
             
         </article>
 
@@ -43,7 +44,10 @@ const Welcome = () => {
           <span>
             you can also register your maintenance in our dapps
           </span>
-          <div className='img3'>
+          <div className='container-img3'>
+            <div className='img3'>
+
+            </div>
 
           </div>
         </article>

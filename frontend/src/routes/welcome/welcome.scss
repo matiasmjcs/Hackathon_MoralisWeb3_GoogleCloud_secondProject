@@ -123,6 +123,14 @@ $breackpoints: (
 }
 
 .welcome_article1--imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome_article1--imagen-child {
+    width: 300px;
+    height: 300px;
          @include media-up(sm) {
             background-image: url(./img1.png);
                 background-position: center;
@@ -134,17 +142,25 @@ $breackpoints: (
 
 }
 
+
 .img2 {
     background-image: url(./img2.png);
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
 }
+.container-img3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .img3 {
-            background-image: url(./png2.png);
-            background-position: center;
-            background-size: contain;
-            background-repeat: no-repeat;
-        
+    width: 300px;
+    height: 300px;
+    background-image: url(./png2.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
 }
