@@ -11,8 +11,8 @@ const Welcome = () => {
 
         <article className='welcome_article1'>
           <div className='welcome_div1'>
-            <h1 className="welcome__h1">Focus</h1>
-            <p className='welcome__p'>a dApps that watches over the <br /> registration of your vehicle</p>
+            <h1 className="welcome__h1">vehicle registration</h1>
+            <p className='welcome__p'>register your vehicle to keep your records <br/> safe with blockchain technology</p>
           </div>
 
           <div>
@@ -31,15 +31,21 @@ const Welcome = () => {
 
       <section className='welcome__section2'>
         <article className='welcome__article2'>
+            <span>
+            you can register your vehicle and then you can <br /> transfer it to its new owner if you sell it
+            </span>
+            <div className='img2'>
 
+            </div>
         </article>
 
         <article className='welcome__article2'>
+          <span>
+            you can also register your maintenance in our dapps
+          </span>
+          <div className='img3'>
 
-        </article>
-
-        <article className='welcome__article2'>
-          
+          </div>
         </article>
 
       </section> 

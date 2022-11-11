@@ -3,7 +3,7 @@ import Button from '../button1/button'
 import './navBar.css'
 import Card from '../card/card'
 import { UserContext } from '../../context/userProvider'
-import { Home } from '@web3uikit/icons';
+import { Star } from '@web3uikit/icons';
 import { NavLink } from 'react-router-dom'
 import BoxMetamask from '../boxMetamask/boxMetamask'
 
@@ -29,7 +29,7 @@ const NavBar = () => {
     <>
       <nav className='nav'>
         <NavLink to='/'>
-          <Home className='metamask home' fontSize="30px" color='#999' />
+          <Star className='metamask home' fontSize="30px" color='#7B3FE4' />
         </NavLink>
         {(red === false && conectado) && <button className='plgn' onClick={Switch}>{redState }</button>}
         <Button 

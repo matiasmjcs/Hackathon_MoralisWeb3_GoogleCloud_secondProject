@@ -13,7 +13,7 @@ const Footer = () => {
         <a Target="_blank" href='mailto:matiasignaciomejiascisternas@gmail.com'> matiasmejiascisternas@gmail.com</a><br /> <br />
          repository: 
 
-        <a Target="_blank" href='https://github.com/matiasmjcs/Hackathon_MoralisWeb3_GoogleCloud'> Github </a>
+        <a Target="_blank" href='https://github.com/matiasmjcs/Hackathon_MoralisWeb3_GoogleCloud_secondProject.git'> Github </a>
         </div>
 
     </footer>

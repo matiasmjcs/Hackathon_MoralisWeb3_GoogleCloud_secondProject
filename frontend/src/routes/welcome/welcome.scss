@@ -41,24 +41,20 @@ $breackpoints: (
     
 }
 
-.welcome_article1--imagen {
-    border: solid 1px $color1;
-    margin: 100px;
-}
-
 .welcome_article1 {
     display: grid;
     justify-items: center;
     align-items: center;
-
+    padding: 10px;
 }
 
 .welcome__h1 {
-    font-size: 3rem;
-    font-family: 'Press Start 2P', cursive;
+    font-size: 2rem;
+    font-family: 'Space Grotesk', sans-serif;
     letter-spacing: .7rem;
     margin: .7rem;
     color: $color1;
+    text-align: center;
 }
 
 .welcome__h1::after 
@@ -100,6 +96,55 @@ $breackpoints: (
 }
 
 .welcome__article2 {
-    width: 100%;
-    height: 500px;
+  
+    @include media-up(sm) {
+        width: 100%;
+            height: 700px;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+    }
+        @include media-up(md) {
+            width: 100%;
+                height: 700px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr;
+        }
+}
+
+.welcome__article2 span {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    font-size: 1.4rem;
+        margin: 10px;
+        font-family: 'Space Grotesk', sans-serif;
+}
+
+.welcome_article1--imagen {
+         @include media-up(sm) {
+            background-image: url(./img1.png);
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+         }@include media-up(md) {
+          
+         }
+
+}
+
+.img2 {
+    background-image: url(./img2.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+}
+
+.img3 {
+            background-image: url(./png2.png);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        
 }
