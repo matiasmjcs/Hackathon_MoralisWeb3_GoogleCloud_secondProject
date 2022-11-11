@@ -67,7 +67,7 @@ medical record, patient and specialist information is stored in the smart contra
   </div>
   
   <div align="center">
-    <img src='./frontend/src/img/img7.png' height=350 />
+    <img src='./frontend/src/img/pantalla5.png' height=350 />
   </div>
 
 <div align="center">
